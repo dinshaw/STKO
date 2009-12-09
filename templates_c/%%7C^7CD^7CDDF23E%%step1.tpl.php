@@ -1,0 +1,59 @@
+<?php /* Smarty version 2.6.6, created on 2009-04-06 13:50:09
+         compiled from reserve/step1.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'reserve/step1.tpl', 1, false),array('modifier', 'money_format', 'reserve/step1.tpl', 1, false),array('modifier', 'cat', 'reserve/step1.tpl', 1, false),array('modifier', 'date_format', 'reserve/step1.tpl', 1, false),)), $this); ?>
+<!-- <?php echo 'reserve/step1.tpl'; ?>
+ --><?php if ($this->_tpl_vars['adminUser']): ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "admin/admin_header.tpl", 'smarty_include_vars' => array('title' => 'Stockton Outfitters')));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?><?php else: ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "header.tpl", 'smarty_include_vars' => array('title' => 'Stockton Outfitters')));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?><?php endif; ?><div id="content"><?php if ($this->_tpl_vars['adminUser']): ?><h1 class="top">Admin Reservation Edit - Current Availability <?php echo $this->_tpl_vars['currentYear']; ?>
+</h1><?php else: ?><h1 class="top">Reservations - Current Availability <?php echo $this->_tpl_vars['currentYear']; ?>
+</h1><?php endif; ?><?php if ($this->_tpl_vars['error']): ?><p class="error"><?php echo ((is_array($_tmp=$this->_tpl_vars['error'])) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
+</p><?php endif; ?><?php if ($this->_tpl_vars['adminUser']): ?><form name="reservations" action="admin.php" method="post"><input type="hidden" name="mode" value="bookings"><input type="hidden" name="custID" value="<?php echo $this->_tpl_vars['custID']; ?>
+"><input type="hidden" name="resID" value="<?php echo $this->_tpl_vars['resID']; ?>
+"><?php else: ?><form name="reservations" action="index.php" method="post"><input type="hidden" name="mode" value="reserve"><?php endif; ?><input type="hidden" name="action" value="reserve"><p class="ctr">If you have any difficulties using our online reservation system, or would prefer to speak with someone at our headquarters please contact us via email at <a href="mailTo:info@StocktonOutfitters.com?subject=Reservation">info@StocktonOutfitters.com</a> or by phone at (406) 782-9532.</h2><table class="userForm">	<tr>		<td>Number of hunters in your group:</td>		<td><select class="normText" name="hunters"><option value="">...</option><option value="1" <?php if ($this->_tpl_vars['hunters'] == '1'): ?>selected<?php endif; ?>>1</option><option value="2" <?php if ($this->_tpl_vars['hunters'] == '2'): ?>selected<?php endif; ?>>2</option><option value="3" <?php if ($this->_tpl_vars['hunters'] == '3'): ?>selected<?php endif; ?>>3</option><option value="4" <?php if ($this->_tpl_vars['hunters'] == '4'): ?>selected<?php endif; ?>>4</option><option value="5" <?php if ($this->_tpl_vars['hunters'] == '5'): ?>selected<?php endif; ?>>5</option><option value="6" <?php if ($this->_tpl_vars['hunters'] == '6'): ?>selected<?php endif; ?>>6</option></select></td>	</tr>		<tr>		<td>Number of <em>Non-Hinting</em> Observers:</td>		<td><select class="normText" name="observers"><option value="">...</option><option value="0" <?php if ($this->_tpl_vars['observers'] == '0'): ?>selected<?php endif; ?>>0</option><option value="1" <?php if ($this->_tpl_vars['observers'] == '1'): ?>selected<?php endif; ?>>1</option><option value="2" <?php if ($this->_tpl_vars['observers'] == '2'): ?>selected<?php endif; ?>>2</option><option value="3" <?php if ($this->_tpl_vars['observers'] == '3'): ?>selected<?php endif; ?>>3</option><option value="4" <?php if ($this->_tpl_vars['observers'] == '4'): ?>selected<?php endif; ?>>4</option><option value="5" <?php if ($this->_tpl_vars['observers'] == '5'): ?>selected<?php endif; ?>>5</option><option value="6" <?php if ($this->_tpl_vars['observers'] == '6'): ?>selected<?php endif; ?>>6</option><option value="7" <?php if ($this->_tpl_vars['observers'] == '7'): ?>selected<?php endif; ?>>7</option></select></td>	</tr></table><p class="ctr">For groups larger than 5 please contact us directly at <a href="mailTo:info@StocktonOutfitters.com?subject=Reservation">info@StocktonOutfitters.com</a></p><p class="ctr">For each Non-Hunting Observer there will be a charge of $<?php echo ((is_array($_tmp=$this->_tpl_vars['observerPrice'])) ? $this->_run_mod_handler('money_format', true, $_tmp, 2, ".", ",") : smarty_modifier_money_format($_tmp, 2, ".", ",")); ?>
+</h2><h2><?php if ($this->_tpl_vars['edit'] == 'true'): ?>You may edit your trip selection here.<?php else: ?>Please select from the available trips below:<?php endif; ?></h2><!-- start trip loop --><?php unset($this->_sections['tripList']);
+$this->_sections['tripList']['name'] = 'tripList';
+$this->_sections['tripList']['loop'] = is_array($_loop=$this->_tpl_vars['tripLoop']) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
+$this->_sections['tripList']['show'] = true;
+$this->_sections['tripList']['max'] = $this->_sections['tripList']['loop'];
+$this->_sections['tripList']['step'] = 1;
+$this->_sections['tripList']['start'] = $this->_sections['tripList']['step'] > 0 ? 0 : $this->_sections['tripList']['loop']-1;
+if ($this->_sections['tripList']['show']) {
+    $this->_sections['tripList']['total'] = $this->_sections['tripList']['loop'];
+    if ($this->_sections['tripList']['total'] == 0)
+        $this->_sections['tripList']['show'] = false;
+} else
+    $this->_sections['tripList']['total'] = 0;
+if ($this->_sections['tripList']['show']):
+
+            for ($this->_sections['tripList']['index'] = $this->_sections['tripList']['start'], $this->_sections['tripList']['iteration'] = 1;
+                 $this->_sections['tripList']['iteration'] <= $this->_sections['tripList']['total'];
+                 $this->_sections['tripList']['index'] += $this->_sections['tripList']['step'], $this->_sections['tripList']['iteration']++):
+$this->_sections['tripList']['rownum'] = $this->_sections['tripList']['iteration'];
+$this->_sections['tripList']['index_prev'] = $this->_sections['tripList']['index'] - $this->_sections['tripList']['step'];
+$this->_sections['tripList']['index_next'] = $this->_sections['tripList']['index'] + $this->_sections['tripList']['step'];
+$this->_sections['tripList']['first']      = ($this->_sections['tripList']['iteration'] == 1);
+$this->_sections['tripList']['last']       = ($this->_sections['tripList']['iteration'] == $this->_sections['tripList']['total']);
+?><!-- if it is not the first time through close the table and do a submit button --><?php if ($this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['type'] && $this->_sections['tripList']['index'] != 0): ?></table><div class="lr"><span><?php if ($this->_tpl_vars['edit'] == 'true'): ?><input type="submit" name="save1" value="Save Changes" class="button"><?php else: ?><input type="submit" name="step1" value="Continue" class="button"></span><?php endif; ?></div><?php endif; ?><!-- if it's a new type of trip show the tripType details --> <?php if ($this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['type']): ?><h1 class="sub"><?php echo $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['type']; ?>
+</h1><p class="teaser" align="center"><?php echo $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['description']; ?>
+</p><table class="price"> 		<tr>		<td><input type="radio" class="radio" name="price" value="<?php echo $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['typeID']; ?>
+_price1" <?php if ($this->_tpl_vars['price'] == ((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['typeID'])) ? $this->_run_mod_handler('cat', true, $_tmp, '_price1') : smarty_modifier_cat($_tmp, '_price1'))): ?>checked<?php endif; ?>></td>		<td><?php echo $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['price1_desc']; ?>
+</td>		<th>$<?php echo ((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['price1'])) ? $this->_run_mod_handler('money_format', true, $_tmp, 2, ".", ",") : smarty_modifier_money_format($_tmp, 2, ".", ",")); ?>
+ per client</th>		<td><input type="radio" class="radio" name="price" value="<?php echo $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['typeID']; ?>
+_price2" <?php if ($this->_tpl_vars['price'] == ((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['typeID'])) ? $this->_run_mod_handler('cat', true, $_tmp, '_price2') : smarty_modifier_cat($_tmp, '_price2'))): ?>checked<?php endif; ?>></td>		<td><?php echo $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['price2_desc']; ?>
+</td>		<th>$<?php echo ((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['price2'])) ? $this->_run_mod_handler('money_format', true, $_tmp, 2, ".", ",") : smarty_modifier_money_format($_tmp, 2, ".", ",")); ?>
+ per client</th>	</tr>		<tr>		<td colspan="6"><hr></td>	</tr></table><!-- end the triytype details if --><table class="week"> <?php endif; ?>	<tr>		<td><?php if ($this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['spots'] != 'UNAVAILABLE'): ?><input type="radio"  name="trip" value="<?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['typeID'])) ? $this->_run_mod_handler('cat', true, $_tmp, '_') : smarty_modifier_cat($_tmp, '_')))) ? $this->_run_mod_handler('cat', true, $_tmp, $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['tripID']) : smarty_modifier_cat($_tmp, $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['tripID'])); ?>
+" <?php if ($this->_tpl_vars['trip'] == ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['typeID'])) ? $this->_run_mod_handler('cat', true, $_tmp, '_') : smarty_modifier_cat($_tmp, '_')))) ? $this->_run_mod_handler('cat', true, $_tmp, $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['tripID']) : smarty_modifier_cat($_tmp, $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['tripID']))): ?>checked<?php endif; ?>><?php endif; ?></td>		<td><?php echo ((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['start_date'])) ? $this->_run_mod_handler('date_format', true, $_tmp, "%B %e") : smarty_modifier_date_format($_tmp, "%B %e")); ?>
+ - <?php echo ((is_array($_tmp=$this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['end_date'])) ? $this->_run_mod_handler('date_format', true, $_tmp, "%B %e") : smarty_modifier_date_format($_tmp, "%B %e")); ?>
+ &bull; <em><?php echo $this->_tpl_vars['tripLoop'][$this->_sections['tripList']['index']]['spots']; ?>
+</em></td>	</tr><?php endfor; endif; ?><!-- close the table ad do a submit button for the last time through because the loop will not work --></table><div class="lr"><span><?php if ($this->_tpl_vars['edit'] == 'true'): ?><input type="submit" name="save1" value="Save Changes" class="button"><?php else: ?><input type="submit" name="step1" value="Continue" class="button"></span><?php endif; ?></div></form><!-- end trip loop --></div><?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "footer.tpl", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>

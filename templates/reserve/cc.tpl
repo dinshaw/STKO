@@ -1,0 +1,1 @@
+<!-- <%$smarty.template%> --><%include file="header.tpl" title="Stockton Outfitters"%><div id="content"><h1 class="top">Spring Bear<span>Week 1 - May 8-12</span></h1><%if $error %><p class="error"><%$error|nl2br%></p><%/if%><h3>Payment by credit card place holder page</h3><%include file="footer.tpl"%>

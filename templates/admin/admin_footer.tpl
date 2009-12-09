@@ -1,0 +1,1 @@
+<!-- <%$smarty.template%> --></div>	</BODY></HTML>

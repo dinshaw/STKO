@@ -1,0 +1,1 @@
+<!-- <%$smarty.template%> --><%include file="popup_header.tpl" title=$title%><div id="popup_content"><span class="title"><%$title%></span><span class="popupImg"><img src="userimages/pages/<%$page%>/<%$image%>" width="<%$w%>"></span><span class="caption"><%$caption%></span></div><%include file="popup_footer.tpl"%>

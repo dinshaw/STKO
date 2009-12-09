@@ -1,0 +1,1 @@
+<!-- <%$smarty.template%> --><%include file="admin/admin_header.tpl"%><p>Home</p><%include file="admin/admin_footer.tpl"%>

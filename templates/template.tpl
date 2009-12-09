@@ -1,0 +1,1 @@
+<!-- <%$smarty.template%> --><%include file="header.tpl" title="DINSHAW - Original Blues-Rock band in New York City"%><div id="content"></div><%include file="footer.tpl"%>

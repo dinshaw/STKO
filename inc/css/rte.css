@@ -1,0 +1,41 @@
+.rteImage {
+	xbackground: #D3D3D3;
+	border: 1px solid #D3D3D3;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteImageRaised, .rteImage:hover {
+	xbackground: #D3D3D3;
+	border: 1px outset;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteImageLowered, .rteImage:active {
+	xbackground: #D3D3D3;
+	border: 1px inset;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteVertSep {
+	margin: 0 4px 0 4px;
+}
+
+.rteBack {
+	background: #71a5dd;
+	border: 1px outset;
+	letter-spacing: 0;
+	padding: 2px;
+}
+
+.rteBack tbody tr td, .rteBack tr td {
+	xbackground: #ff0000;
+	padding: 0;
+}
+
+.rteDiv {
+	display: block;
+	position: relative;
+}

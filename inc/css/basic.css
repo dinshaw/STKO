@@ -1,0 +1,114 @@
+
+html{borer:0;margin:0;padding:0;}
+body{margin:0;border:0;background-color:#003;color:#71a5dd;}
+html, body{padding-bottom:20px;}
+img{border:0;}
+img.popup{border:2px solid #71a5dd;}
+
+a{color:#fff;}
+a:visited{color:#999;}
+
+.error, .red{font-weight:bold;color:#f00; text-indent:0; font-size:14px;}
+.small{font-size:12px;margin:2px;}
+input.small input.num,.num{width:20px;}
+input.radio{margin:0; padding:0;}
+input.smaller, p.smaller{font-size:11px}
+input.button{background-color:#006;color:#71a5dd;border:1px solid #71a5dd;cursor:pointer;}
+input.dollar {width:60px;}
+input.title{width:98%;margin:0 0 10px 0;}
+textarea.body{width:98%;height:10em;}
+textarea.titleShort{width:58%;height:1.2em;}
+textarea.bodyShort{width:58%;height:10em;}
+.left{text-align:left;}
+.right{text-align:right;}
+.ctr{text-align:center;}
+.mb10 {margin-bottom:10px;}
+.mt10 {margin-top:10px;}
+.mt0{margin-top:0;}
+.normText{ font-family:Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-size:12px; font-weight:normal;}
+
+h1,h2,h3,h4,input,textarea,select{font-family:"Times New Roman", Times, serif;line-height:14px;}
+.white,h1,h2,h3{color:#fff;}
+h1{font-weight:normal;font-style:italic;border-bottom:1px solid #fff;font-size:24px;line-height:24px;margin:30px 0 10px 0;}
+h1.top{margin-top:0;}
+h1.sub {color:#71a5dd; border-bottom-color:#71a5dd;}
+h2{position:relative;display:block;background-color:#71a5dd;font-size:14px;margin:5px 0;padding:2px 5px;}
+h3{display:inline;font-size:14px;}
+h4{margin-bottom:2px;}
+h5{font-size:15px;}
+p{font-weight:normal;text-indent:1em;margin:0 0 10px 0;font-size:14px;line-height:17px;}
+p.noIndent{font-weight:normal;margin:0 0 10px 0;font-size:14px;line-height:17px;}
+#sidebar p{text-indent:0;}
+#content p.teaser, h1 span{color:#fff;font-style:italic;font-weight:bold;font-size:16px;}
+p.lg{font-size:16px;}
+
+/* masthead logo */
+div#head{margin:20px;background-color:#003;border:2px solid white;color:#fff;padding:4px;}
+div#head span{display:block;margin:0;height:84px;border:1px solid white;background:#003 url(../../templates/images/header/mtn-tile.jpg);font-family:"Times New Roman", Times, serif;font-size:50px;text-align:center;padding:0;}
+#head span .small{padding:0;font-size:16px;text-align:center;font-weight:bold;margin:0;}
+/* main positioning styles */
+div#container{position:relative;margin:20px;border:1px solid #003;background:url(../../templates/images/header/elk-dark.jpg) no-repeat;height:1000px;}
+div#content{position:relative;margin:0 12% 0 17%;}
+div#popup_content{margin:auto; text-align:center;}
+span.popupImg{display:block;}
+
+span.caption{display:block;text-align:center;color:#fff;font-size:17px;font-style:italic;padding:0;margin-top:3px}
+span.title{text-align:center;text-decoration:underline;display:block;}
+
+div#popup_content span.title{display:block;padding-bottom:20px;}
+div#popup_content span.caption{display:block;padding-top:20px;}
+div#popup_content img{border:1px solid #71a5dd;}
+
+table#cms td, table#cms th {font-size:11px;}
+table#cms th{text-align:right;font-weight:normal;}
+
+div.mm{text-align:center; margin:0 0 25px 0;border:1px solid #71a5dd; padding:10px;}
+.videoPlayer{border:1px solid #71a5dd;}
+
+table.week{ margin:auto;}
+table.week td{padding:5px; vertical-align:middle; text-align:left;}
+
+table.userForm{margin:auto; padding:0; color:#fff; font-size:14px;}
+table.userForm th, td{padding:5px;}
+table.userForm th{text-align:right;}
+
+table.price{ margin:auto; color:#fff;}
+table.price td.text,table.price th.text{padding:5px 50px 0 0;}
+table.price th{color:#71a5dd; text-align:left;}
+
+table.dates th, table.dates select{font-size:14px;}
+
+table.userInfo td,table.userInfo th{ margin:0; padding:5px; color:#fff; font-size:16px;  text-align:left;} 
+
+div#tc{color:#fff; margin:0 20px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px;}
+div#tc ol li{margin:10px 0; font-size:12px;}
+div#tc p.teaser{font-style:italic;}
+div#tc h1{text-align:center;}
+
+h5{font-size:16px; color:#fff; font-weight:bold;margin:10px 0;}
+h5.break{margin:10px 0 20px 0;}
+h5 span{color:#71a5dd; margin:0 0 0 5px;}
+
+table#res td{
+font-size:12px;
+color:#FFF;
+border:1px solid white;
+}
+
+table#res th{
+border:1px solid white;
+font-size:11px;
+}
+
+table#res, table#res th,table#res td{
+margin:0;
+border-collapse:collapse;
+}
+
+
+table#trips{
+	width:400px;
+}
+table#trips td.tripTitle{font-weight:normal;font-style:italic;border-bottom:1px solid #fff;font-size:24px;line-height:24px;margin:30px 0 10px 0;}
+
+#footer{font:10px Verdana, Arial, Helvetica, sans-serif; padding:10px;}
